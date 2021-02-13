@@ -2,19 +2,17 @@ import React, { useState } from 'react';
 
 type CounterProps = {
     count: number;
+    increment: () => void;
+    decrement: () => void;
+
 }
 
 const Counter = (props: CounterProps) => {
-    const [count, setCount] = useState(props.count)
-
-    function increment() { setCount(count + 1) }
-    function decrement() { setCount(count - 1) }
-
     return (
         <div>
-            <button onClick={increment}>increment</button>
-            {count}
-            <button onClick={decrement}>decrement</button>
+            {props.count}
+            <button onClick={props.increment}>increment</button>
+            <button onClick={props.decrement}>decrement</button>
         </div>
     );
 }
