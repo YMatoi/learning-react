@@ -3,6 +3,7 @@ import ReactModal from 'react-modal'
 
 type ModalProps = {
     isOpen: boolean;
+    text: string;
 }
 
 const Modal = (props: ModalProps) => {
@@ -13,9 +14,9 @@ const Modal = (props: ModalProps) => {
 
     return (
         <div>
-            <button onClick={showModal}>Show Modal</button>
+            <button onClick={showModal}>Show Modal {props.text}</button>
             <ReactModal isOpen={isOpen}>
-                <button onClick={hideModal}>Hide Modal</button>
+                <button onClick={hideModal}>Hide Modal {props.text}</button>
             </ReactModal>
         </div>
     );

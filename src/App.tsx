@@ -3,7 +3,10 @@ import Modal from './Modal'
 
 function App() {
   return (
-    <Modal isOpen={true} />
+    <div>
+    <Modal isOpen={true} text={"1"} />
+    <Modal isOpen={true} text={"2"} />
+    </div>
   );
 }
 
