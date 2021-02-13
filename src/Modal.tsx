@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactModal from 'react-modal'
+import Counter from './Counter'
 
 type ModalProps = {
     isOpen: boolean;
@@ -17,6 +18,7 @@ const Modal = (props: ModalProps) => {
             <button onClick={showModal}>Show Modal {props.text}</button>
             <ReactModal isOpen={isOpen}>
                 <button onClick={hideModal}>Hide Modal {props.text}</button>
+                <Counter count={0} />
             </ReactModal>
         </div>
     );
